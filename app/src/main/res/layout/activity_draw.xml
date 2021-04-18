@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DrawActivity"
+    android:orientation="vertical"
+    android:background="?attr/backgroundcolor"
+    android:id="@+id/root">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar_layout">
+
+    </include>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/edTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Title"
+        android:textColorHint="?attr/textcolor"
+        android:inputType="textCapSentences"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:textColor="?attr/textcolor"
+        android:layout_below="@id/layout_toolbar"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/edNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_gravity="top"
+        android:background="@null"
+        android:cursorVisible="true"
+        android:textColorHint="?attr/textcolor"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Enter Note"
+        android:inputType="textCapSentences|textMultiLine"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:isScrollContainer="true"
+        android:paddingTop="4dp"
+        android:textColor="?attr/textcolor"
+        tools:text="Enter Note"
+        android:layout_below="@id/edTitle"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/img_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        android:layout_below="@id/edNote"
+        android:layout_marginBottom="20dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutOpacity1"
+        android:layout_below="@id/edNote"
+        android:id="@+id/layoutDrawView">
+
+        <com.rm.freedrawview.FreeDrawView
+            android:id="@+id/drawView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#ede7f6"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutWidth1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_above="@id/layoutOption"
+        android:background="@color/black"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stroke_width"
+            android:textColor="@android:color/white"/>
+
+        <SeekBar
+            android:id="@+id/slider_thickness1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutOpacity1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_above="@id/layoutOption"
+        android:background="@color/black"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stroke_alpha"
+            android:textColor="@android:color/white"/>
+
+        <SeekBar
+            android:id="@+id/slider_alpha1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutColor1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/layoutOption"
+        android:visibility="gone"
+
+        >
+
+        <include
+            android:id="@+id/layoutColor"
+            layout="@layout/color_palette_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+        </include>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutOption"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_alignParentBottom="true"
+        android:elevation="30dp"
+        android:clipToPadding="false"
+        >
+
+
+
+        <ImageButton
+            android:id="@+id/btnWidth"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/adjust"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+
+            >
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnChangeColor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/color_lens"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+
+            >
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnOpacity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/opacity"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            >
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/clear_all_"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            >
+
+        </ImageButton>
+
+        ></LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

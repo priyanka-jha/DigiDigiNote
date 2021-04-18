@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SpeechActivity"
+    android:orientation="vertical"
+    android:background="?attr/backgroundcolor"
+    >
+
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar_layout">
+
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <EditText
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/edTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Title"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:inputType="textCapSentences"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"/>
+
+        <EditText
+            android:id="@+id/edNote"
+            android:cursorVisible="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:ems="10"
+            android:layout_below="@+id/edTitle"
+            android:hint="Add Text"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:gravity="top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:layout_above="@+id/btnMic"
+            android:paddingTop="4dp"
+            android:background="@null"
+            android:isScrollContainer="true"
+            />
+
+        <ImageButton
+            android:id="@+id/btnMic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/mic" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:id="@+id/rootLayout"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    android:fitsSystemWindows="true"
+    android:background="?attr/backgroundcolor"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout"
+
+        >
+
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar_layout"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior = "@string/appbar_scrolling_view_behavior"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/note_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:scrollbars="vertical"
+            android:visibility="invisible"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/toDoEmptyView"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:src="@drawable/empty_note1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                />
+            <TextView
+                android:id="@+id/empty_notes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif-light"
+                android:text="No notes added"
+                android:textStyle="bold"
+                android:textColor="?attr/imagetextcolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/bottomcolor"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+
+
+        >
+
+        <TextView
+            android:id="@+id/textNote"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Enter a note...."
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="0"
+                android:layout_height="match_parent"
+                android:src="@drawable/create"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                >
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnMic"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/mic"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+
+                >
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnCheck"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/check_circle"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+
+                >
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnBrush"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/brush"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                >
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnImage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/image"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                >
+
+            </ImageButton>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

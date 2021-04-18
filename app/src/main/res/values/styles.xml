@@ -1,0 +1,94 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+
+        <item name="backgroundcolor">#ffffff</item>
+        <item name="cardbackground">#f0f0f0</item>
+        <item name="cardbackgroundselected">#EAC554</item>
+        <item name="textcolor">#000000</item>
+        <item name="itemtextcolor">#000000</item>
+        <item name="imagetextcolor">@color/colorPrimary</item>
+        <item name="bottomcolor">@color/colorPrimary</item>
+
+        <item name="tintcolor">#f2f2f2</item>
+        <item name="buttoncolor">#EAC554</item>
+
+        <item name="android:windowAnimationStyle">@style/WindowsAnimationTransition</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/colorPrimary</item>
+        <item name="actionMenuTextColor">#fff</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="actionModeStyle">@style/LStyled.ActionMode</item>
+
+    </style>
+
+    <!-- NIGHT/DARK mode theme. -->
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#c0ca33</item>
+        <item name="colorPrimaryDark">#8c9900</item>
+        <item name="colorAccent">#8c9900</item>
+        <item name="backgroundcolor">#433e3e</item>
+        <item name="cardbackground">#7e7979</item>
+        <item name="cardbackgroundselected">#EAC554</item>
+        <item name="bottomcolor">#c0ca33</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="itemtextcolor">#ffffff</item>
+        <item name="imagetextcolor">#c0ca33</item>
+
+
+        <item name="tintcolor">#b2b32c</item>
+        <item name="buttoncolor">#EAC554</item>
+
+        <item name="android:windowAnimationStyle">@style/WindowsAnimationTransition</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/colorPrimary</item>
+        <item name="actionMenuTextColor">#fff</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="actionModeStyle">@style/LStyledDark.ActionMode</item>
+
+
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="WindowsAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="DarkTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="LStyled.ActionMode" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/colorPrimary</item>
+    </style>
+
+    <style name="LStyledDark.ActionMode" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/colorPrimaryDarkTheme</item>
+    </style>
+
+</resources>

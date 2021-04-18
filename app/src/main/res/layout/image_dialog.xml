@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Source"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="17dp"
+            >
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <ImageButton
+                android:id="@+id/imgCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/camera_black"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="10dp"
+                >
+
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/textCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Camera"
+                android:textSize="15dp"
+                android:textColor="@color/black">
+
+            </TextView>
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            >
+
+            <ImageButton
+                android:id="@+id/imgGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/image_black"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="10dp"
+                >
+
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/textGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Gallery"
+                android:textSize="15dp"
+                android:textColor="@color/black">
+
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

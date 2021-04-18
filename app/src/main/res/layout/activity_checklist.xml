@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChecklistActivity"
+    android:orientation="vertical"
+    android:background="?attr/backgroundcolor"
+
+    >
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar_layout">
+
+    </include>
+
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/edTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Title"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textCapSentences"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:textColor="?attr/textcolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_container"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edText"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.8"
+            android:hint="Add Item"
+            android:inputType="textCapSentences"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor" />
+
+        <ImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/ic_add_black_24dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/checkItemsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+</LinearLayout>
