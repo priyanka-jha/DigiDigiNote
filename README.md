@@ -3,10 +3,10 @@ Simple notepad application where the user can store simple text notes, canvas dr
 
 **Here are the screenshots:**
 
-<img src="screenshots/Ss1.png" width="350" height="500">
+<img src="screenshots/Ss1.png" width="300" height="600">
 
-<img src="screenshots/Ss2.png" width="350" height="500">
+<img src="screenshots/Ss2.png" width="300" height="600">
 
-<img src="screenshots/Ss3.png" width="300" height="500">
+<img src="screenshots/Ss3.png" width="300" height="600">
 
-<img src="screenshots/Ss4.png" width="300" height="500">
+<img src="screenshots/Ss4.png" width="300" height="600">
